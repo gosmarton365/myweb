@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹사이트 플랫폼 선정 컨설팅 보고서</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f7f9fc;
+            padding: 40px 20px;
+        }
+
+        .report-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #1a4a75;
+            border-bottom: 3px solid #1a4a75;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #1a4a75;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            border-left: 5px solid #667eea;
+            padding-left: 10px;
+        }
+        
+        h3 {
+            font-size: 18px;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f0f4ff;
+            color: #1a4a75;
+            font-weight: 700;
+            border-top: 2px solid #1a4a75;
+        }
+        
+        .summary-table tr:first-child th {
+             border-top: 2px solid #1a4a75;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fcfdff;
+        }
+        
+        .highlight-row td {
+            background-color: #e6f7ff;
+            font-weight: 700;
+        }
+        
+        .note {
+            background-color: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .recommendation {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #a8baff;
+            border-radius: 8px;
+            background-color: #eff3ff;
+        }
+        
+        .recommendation ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .recommendation li {
+            margin-bottom: 8px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="report-container">
+
+        <h1>웹사이트 플랫폼 선정 컨설팅 보고서</h1>
+
+        <p style="font-size: 14px; color: #666; margin-bottom: 30px;">
+            **프로젝트:** 조현철님 개인 브랜딩 사이트 구축 | **작성일:** 2025. 09. 30.
+        </p>
+
+        <!-- I. 경영진 요약 (Executive Summary) -->
+        <h2>I. 경영진 요약 (Executive Summary)</h2>
+        <p>본 보고서는 클라이언트님의 개인 브랜딩 웹사이트 구축을 위한 워드프레스와 아임웹 플랫폼을 다각도로 비교 분석한 결과를 담고 있으며, 장기적 비전과 비용 효율성 측면에서 **최적의 플랫폼 선정**을 돕는 데 목적이 있습니다.</p>
+
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>워드프레스 (WP)</th>
+                    <th>아임웹 (IMWEB)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>**총 비용 효율성 (3년 TCO)**</td>
+                    <td style="font-weight: 700; color: #28a745;">압도적 우세 (약 43만원~)</td>
+                    <td style="color: #dc3545;">비용 높음 (약 77만원~)</td>
+                </tr>
+                <tr>
+                    <td>**마케팅 & 확장성**</td>
+                    <td style="font-weight: 700; color: #28a745;">압도적 우세 (고급 SEO, 무한 비즈니스 확장)</td>
+                    <td>제한적 (코드 제약, 플랫폼 제공 범위 내)</td>
+                </tr>
+                <tr>
+                    <td>**운영 편의성**</td>
+                    <td>기술적 관리 필요</td>
+                    <td style="font-weight: 700; color: #17a2b8;">매우 우수 (직관적, 통합 관리)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- II. 요구사항 및 기능 충족도 -->
+        <h2>II. 요구사항 및 기능 충족도</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>요구사항</th>
+                    <th>워드프레스 (WP)</th>
+                    <th>아임웹 (IMWEB)</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>원페이지/랜딩 페이지 구현</td>
+                    <td>매우 우수 (디자인 자유도 최상)</td>
+                    <td>우수 (템플릿 기반으로 신속 구현)</td>
+                    <td>두 플랫폼 모두 전문적인 디자인 구현 가능.</td>
+                </tr>
+                <tr>
+                    <td>외부 콘텐츠 링크 연동</td>
+                    <td>적합</td>
+                    <td>적합</td>
+                    <td>기능적 차이 없음.</td>
+                </tr>
+                <tr>
+                    <td>보험 관리사 모집 입력 폼</td>
+                    <td>매우 우수 (무료 플러그인, 데이터 관리 용이)</td>
+                    <td>우수 (기본 문의 폼 기능 활용)</td>
+                    <td>WP의 무료 플러그인이 데이터 수집 및 관리가 용이함.</td>
+                </tr>
+                <tr>
+                    <td>SEO (검색 엔진 최적화)</td>
+                    <td style="font-weight: 700; color: #28a745;">압도적 우세 (전문적인 SEO 제어)</td>
+                    <td>제한적 (세밀한 최적화 한계)</td>
+                    <td>개인 브랜딩 성장을 위한 검색 유입 극대화에 WP가 유리.</td>
+                </tr>
+                <tr>
+                    <td>향후 비즈니스 확장성</td>
+                    <td style="font-weight: 700; color: #28a745;">무한대 (WooCommerce, LMS 등)</td>
+                    <td>제한적 (플랫폼이 제공하는 범위 내)</td>
+                    <td>장기적으로 수익 모델 추가 시 WP가 압도적 우위.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- III. 총 소유 비용 (TCO) 분석 -->
+        <h2>III. 총 소유 비용 (TCO) 분석 (3년 기준, 도메인 비용 제외)</h2>
+
+        <h3>1. 초기 개발 및 셋업 비용 비교 (최소 개발비 기준, 도메인 제외)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>항목</th>
+                    <th>워드프레스 (WP)</th>
+                    <th>아임웹 (IMWEB)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>**개발비 (원페이지, 최소)**</td>
+                    <td>200,000원</td>
+                    <td>200,000원</td>
+                </tr>
+                <tr>
+                    <td>**테마 구입비 (1회성)**</td>
+                    <td>104,000원 (약 $80)</td>
+                    <td>0원</td>
+                </tr>
+                <tr>
+                    <td>**플랫폼/호스팅 첫 달 이용료**</td>
+                    <td>1,500원</td>
+                    <td>16,000원</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td>**총 초기 비용**</td>
+                    <td style="color: #dc3545; font-size: 15px;">**315,500원**</td>
+                    <td style="color: #28a745; font-size: 15px;">**216,000원**</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2. 3년 총 비용 비교 (TCO, 도메인 비용 제외)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>플랫폼</th>
+                    <th>항목</th>
+                    <th>비용 (3년 합산, VAT 별도)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>**워드프레스**</td>
+                    <td>개발비/테마/설치비</td>
+                    <td>약 314,000원</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>호스팅 월 이용료 (36개월)</td>
+                    <td>54,000원 (1,500원/월)</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td></td>
+                    <td>**총합 (3년 TCO)**</td>
+                    <td style="color: #28a745; font-size: 15px;">**368,000 ~ 468,000원**</td>
+                </tr>
+                <tr>
+                    <td>**아임웹**</td>
+                    <td>개발비/초기 설정비</td>
+                    <td>200,000 ~ 300,000원</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>플랫폼 이용료 (36개월)</td>
+                    <td>576,000원 (16,000원/월)</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td></td>
+                    <td>**총합 (3년 TCO)**</td>
+                    <td style="color: #dc3545; font-size: 15px;">**776,000 ~ 876,000원**</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="note">
+            **※ 유의사항:** 아임웹 Starter 요금제는 기본적인 기능만 제공하며, 쇼핑몰/결제 등 확장 기능 필요 시 월 비용이 2~3배 이상 증가합니다.
+        </div>
+
+        <h3>3. 도메인 구매 비용 상세 분석 (별도)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>도메인</th>
+                    <th>Cafe24 (2년 계약 비용)</th>
+                    <th>Hosting.kr (1년 최초 계약 비용)</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>**XXXX.KR**</td>
+                    <td>44,000원</td>
+                    <td>9,800원</td>
+                    <td>Hosting.kr은 1년차 초기 등록 비용이 저렴하나, 갱신 시 비용이 상승함.</td>
+                </tr>
+                <tr>
+                    <td>**XXXX.CO.KR**</td>
+                    <td>44,000원</td>
+                    <td>9,800원</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>**XXXX.NET**</td>
+                    <td>46,000원</td>
+                    <td>17,700원</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- IV. 최종 권고 및 의사결정 프레임워크 -->
+        <h2>IV. 최종 권고 및 의사결정 프레임워크</h2>
+
+        <p>최종 결정은 **장기 비전**과 **운영 역량**에 따라 달라집니다.</p>
+
+        <div class="recommendation">
+            <h3>워드프레스 선택을 권고하는 경우 (장기적 가치)</h3>
+            <ul>
+                <li>**비용 효율성:** 3년 운영 시 아임웹 대비 약 38만원 이상 절약을 원할 때.</li>
+                <li>**마케팅 극대화:** 고급 SEO 최적화와 검색 유입 극대화가 필요할 때.</li>
+                <li>**비즈니스 확장:** 향후 전자책, 온라인 강의 등 수익 모델 추가 가능성을 고려할 때.</li>
+                <li>**소유권:** 웹사이트 데이터와 플랫폼에 대한 완전한 소유권을 확보하고 싶을 때.</li>
+            </ul>
+        </div>
+        
+        <div class="recommendation" style="background-color: #f0f7ff; border: 1px solid #c2d9ff;">
+            <h3>아임웹 선택을 고려하는 경우 (단기적 편의성)</h3>
+            <ul>
+                <li>**관리 편의성:** 웹사이트 운영에 기술적인 시간을 전혀 투자하고 싶지 않을 때.</li>
+                <li>**런칭 속도:** 1주일 내 가장 신속하게 사이트를 오픈해야 할 때.</li>
+                <li>**유지보수:** 모든 시스템을 플랫폼이 통합 관리해 주길 원할 때.</li>
+                <li>**비용:** 월 16,000원의 고정 비용 부담이 크지 않다고 판단될 때.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
