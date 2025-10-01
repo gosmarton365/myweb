@@ -84,15 +84,17 @@
 <body class="text-gray-800">
 
     <div class="report-container">
+        <!-- Header -->
         <header class="mb-12 p-8 bg-white rounded-xl shadow-fancy border-t-8 border-blue-600">
             <h1 class="text-4xl font-extrabold text-gray-900 mb-2">웹사이트 플랫폼 선정 컨설팅 보고서</h1>
-            <h2 class="text-xl font-light text-blue-600">보험관리사업소장 개인 브랜딩 사이트 구축</h2>
+            <h2 class="text-xl font-light text-blue-600">조명철님 개인 브랜딩 사이트 구축</h2>
             <div class="mt-4 text-sm text-gray-500">
                 <span class="mr-6">문서 번호: CB-2025-09-001</span>
                 <span>작성일: 2025. 09. 30.</span>
             </div>
         </header>
 
+        <!-- I. 경영진 요약 (Executive Summary) -->
         <section class="mb-12 p-6 bg-white rounded-xl shadow-lg border-l-4 border-blue-500">
             <h2 class="text-3xl font-bold section-header text-blue-800">I. 경영진 요약 (Executive Summary)</h2>
             <p class="text-lg mb-6">본 보고서는 클라이언트님의 개인 브랜딩 웹사이트 구축을 위한 워드프레스와 아임웹의 비교 분석 결과를 담고 있으며, 장기적 비전과 비용 효율성 측면에서 최적의 플랫폼 선정을 돕는 데 목적이 있습니다.</p>
@@ -116,23 +118,32 @@
             </div>
         </section>
 
+        <!-- II. 프로젝트 요구사항 및 기능 충족도 -->
         <section class="mb-12">
             <h2 class="text-3xl font-bold section-header text-blue-800">II. 요구사항 및 기능 충족도</h2>
             
             <div class="bg-white p-6 rounded-xl shadow-lg">
+                <!-- H3 일관성 적용 -->
                 <h3 class="text-2xl h3-standard">핵심 요구사항 분석 결과</h3>
                 <div class="overflow-x-auto">
+                    <!-- tco-table 클래스 추가하여 섹션 III와 통일성 확보 -->
                     <table class="min-w-full divide-y divide-gray-200 rounded-xl border border-gray-300 tco-table" style="table-layout: fixed;">
                         <thead class="bg-gray-50">
                             <tr>
+                                <!-- 요구사항: 25% 폭. text-align: left 유지 (Inline class로 색상 오버라이딩) -->
                                 <th class="w-[25%] px-4 py-3 text-left text-base font-bold text-gray-700 uppercase tracking-wider bg-gray-100 rounded-tl-xl">요구사항</th>
+                                <!-- 워드프레스: 20% 폭. 배경색 유지 (Inline class로 색상 오버라이딩) -->
                                 <th class="w-[20%] px-4 py-3 text-center text-base font-extrabold bg-blue-100 text-blue-800 uppercase tracking-wider">워드프레스 (WP)</th>
+                                <!-- 아임웹: 20% 폭. 배경색 유지 (Inline class로 색상 오버라이딩) -->
                                 <th class="w-[20%] px-4 py-3 text-center text-base font-extrabold bg-green-100 text-green-800 uppercase tracking-wider">아임웹 (IMWEB)</th>
+                                <!-- 비고: 35% 폭. text-align: left 유지 (Inline class로 색상 오버라이딩) -->
                                 <th class="w-[35%] px-4 py-3 text-left text-base font-bold text-gray-700 uppercase tracking-wider bg-gray-100 rounded-tr-xl">비고 (특별 요구사항 반영)</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
+                            <!-- tco-table에 의해 행 배경색 및 호버 효과 자동 적용됨 -->
                             <tr>
+                                <!-- 첫 번째 td에 강제 bg-gray-50 대신, style block의 tco-table tbody td:first-child로 통일성 확보 -->
                                 <td class="w-[25%] px-4 py-4 text-left">원페이지/랜딩 페이지 구현</td>
                                 <td class="w-[20%] px-4 py-4 text-center text-sm text-green-600 font-bold">매우 우수 (디자인 자유도 최상)</td>
                                 <td class="w-[20%] px-4 py-4 text-center text-sm text-green-600 font-bold">우수 (템플릿 기반으로 신속 구현)</td>
@@ -168,17 +179,20 @@
             </div>
         </section>
 
+        <!-- III. 총 소유 비용 (TCO: Total Cost of Ownership) 분석 -->
         <section class="mb-12">
             <h2 class="text-3xl font-bold section-header text-blue-800">III. 총 소유 비용 (TCO) 분석</h2>
             <p class="text-lg mb-6">3년 운영 기준으로 도메인 비용을 제외한 플랫폼별 총 소유 비용을 비교했습니다. 워드프레스는 초기 비용 부담이 크지만 장기적으로 경제적이며, 아임웹은 초기 비용 부담은 낮으나 장기 유지 비용이 높은 구조입니다. 도메인은 고객의 선택에 따라 별도로 합산 가능하도록 세부 내역을 제시합니다.</p>
 
             <div class="bg-white p-6 rounded-xl shadow-lg">
+                <!-- 1. 초기 비용 비교 (NEW SECTION) - Red Accent 유지 -->
                 <h3 class="text-2xl font-extrabold pb-2 mb-4 text-red-700 border-b-2 border-red-200">1. 초기 개발 및 셋업 비용 비교 (Initial Upfront Cost)</h3>
 
                 <div class="overflow-x-auto mb-8">
                     <table class="min-w-full tco-table border border-gray-200 rounded-lg overflow-hidden">
                         <thead>
                             <tr>
+                                <!-- Inline class로 색상 오버라이딩 -->
                                 <th class="py-3 bg-red-100 text-red-800 text-sm w-1/4">항목</th>
                                 <th class="py-3 bg-blue-100 text-blue-800 text-sm w-1/3">워드프레스 (WP)</th>
                                 <th class="py-3 bg-green-100 text-green-800 text-sm w-1/3">아임웹 (IMWEB)</th>
@@ -217,9 +231,11 @@
                     </p>
                 </div>
 
+                <!-- 2. 3년 총 비용 비교 (OLD SECTION, Renamed and renumbered) - H3 일관성 적용 -->
                 <h3 class="text-2xl h3-standard">2. 3년 총 비용 비교 (TCO, 도메인 비용 제외)</h3>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- WordPress TCO -->
                     <div>
                         <div class="p-4 rounded-lg wp-tag mb-4">
                             <h4 class="text-xl font-extrabold">워드프레스 (WordPress)</h4>
@@ -227,6 +243,7 @@
                         <table class="min-w-full tco-table border border-gray-200 rounded-lg overflow-hidden">
                             <thead>
                                 <tr>
+                                    <!-- Inline class로 색상 오버라이딩 -->
                                     <th colspan="2" class="py-3 bg-blue-100 text-blue-800 text-sm">항목</th>
                                     <th class="py-3 bg-blue-100 text-blue-800 text-sm">비용 (3년 합산, VAT 별도)</th>
                                 </tr>
@@ -256,6 +273,7 @@
                         </table>
                     </div>
 
+                    <!-- IMWEB TCO -->
                     <div>
                         <div class="p-4 rounded-lg imweb-tag mb-4">
                             <h4 class="text-xl font-extrabold">아임웹 (IMWEB)</h4>
@@ -263,6 +281,7 @@
                         <table class="min-w-full tco-table border border-gray-200 rounded-lg overflow-hidden">
                             <thead>
                                 <tr>
+                                    <!-- Inline class로 색상 오버라이딩 -->
                                     <th colspan="2" class="py-3 bg-green-100 text-green-800 text-sm">항목</th>
                                     <th class="py-3 bg-green-100 text-green-800 text-sm">비용 (3년 합산, VAT 별도)</th>
                                 </tr>
@@ -294,12 +313,16 @@
                 </div>
             </div>
             
+            <!-- 도메인 구매 비용 상세 분석 섹션: 표를 2개로 나누고 가로 배치 (요청 사항 반영) -->
             <div class="mt-8 bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-500">
+                <!-- H3 일관성 적용 -->
                 <h3 class="text-2xl h3-standard">3. 도메인 구매 비용 상세 분석 (VAT 포함) - 플랫폼별 비교</h3>
                 <p class="text-lg mb-4 text-gray-600">각 제공사의 계약 기간이 다르므로, 플랫폼별 표를 나누어 비교합니다. (Hosting.kr은 최저가 등록 기준)</p>
 
+                <!-- 가로로 나란히 배치하기 위한 그리드 컨테이너 (sm:grid-cols-2로 수정하여 태블릿/데스크톱에서 항상 나란히 배치) -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
+                    <!-- Table 1: Cafe24 (2년 계약/갱신) -->
                     <div>
                         <h4 class="text-xl font-bold text-blue-700 mb-3 text-center p-2 rounded-t-lg bg-blue-50">Cafe24 도메인 비용 (2년 계약/갱신)</h4>
                         <div class="overflow-x-auto">
@@ -332,6 +355,7 @@
                         </div>
                     </div>
 
+                    <!-- Table 2: Hosting.kr (최초 등록 1년 비용) -->
                     <div>
                         <h4 class="text-xl font-bold text-green-700 mb-3 text-center p-2 rounded-t-lg bg-green-50">Hosting.kr 도메인 비용 (최초 등록 1년)</h4>
                         <div class="overflow-x-auto">
@@ -364,18 +388,23 @@
                         </div>
                     </div>
 
-                </div> <p class="mt-4 p-3 rounded-md text-sm text-gray-600 font-bold bg-yellow-100 border-l-4 border-yellow-400">
-                    💡 Hosting.kr은 최초 등록 비용이 매우 저렴하나, 이후 갱신 비용은 Cafe24의 1년 평균 비용과 유사하거나 높을 수 있습니다. Cafe24는 호스팅과의 통합 관리 편리성이, Hosting.kr은 초기 비용 절감이 장점입니다.
+                </div> <!-- End of grid -->
+                
+                <!-- 수정된 문구: 갱신 비용이 계속 저렴하다는 정보를 반영 -->
+                <p class="mt-4 p-3 rounded-md text-sm text-gray-700 font-bold bg-yellow-100 border-l-4 border-yellow-400">
+                    💡 <strong>Hosting.kr</strong>은 최초 등록 비용뿐만 아니라 갱신 비용도 저렴하게 유지되어 <strong>장기적인 비용 절감</strong>에 유리합니다. <strong>Cafe24</strong>는 <strong>호스팅과의 통합 관리 편리성</strong>이 가장 큰 장점입니다.
                 </p>
             </div>
         </section>
 
+        <!-- IV. 향후 확장성 및 추가 비용 분석 (Future Expansion & Cost) - 사용자님 자료 기반으로 전면 수정 -->
         <section class="mb-12">
             <h2 class="text-3xl font-bold section-header text-blue-800">IV. 향후 확장성 및 추가 비용 분석 (전자책/강의 판매 등 상업적 확장 시)</h2>
             <p class="text-lg mb-6 text-red-700 font-bold">전자상거래 기능을 추가할 경우, 별도의 추가 개발 비용이 발생하고, 사이트 관리 비용 상승이 불가피합니다. 기존 플랫폼/호스팅 이용료는 제외한 추가 비용을 비교합니다.</p>
             
             <div class="bg-white p-6 rounded-xl shadow-lg">
                 
+                <!-- NEW: Disclaimer / Cost Warning (요청에 따라 '최저 비용'으로, 폰트 크기 조정됨) -->
                 <p class="p-4 mb-6 text-base font-bold text-red-800 bg-red-100 rounded-lg border-l-4 border-red-500">
                     🚨 중요 고지: 아래 제시된 '추가 개발비'는 전자상거래 기능 연동을 위한 <strong>최저 비용(Minimum Cost)</strong>입니다.<br>
                     실제 요구사항 및 디자인 난이도에 따라 개발 비용은 <strong>1,000,000원 이상으로 크게 증가할 수 있음</strong>을 염두에 두셔야 합니다.
@@ -392,21 +421,27 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- 1. 추가 개발비 -->
                             <tr>
                                 <td class="py-3 px-4 text-left font-bold bg-gray-100 text-gray-800">추가 개발비 (최저)</td>
                                 <td class="py-3 px-4 font-bold text-red-700">600,000원 ~</td>
                                 <td class="py-3 px-4 font-bold text-red-700">700,000원 ~</td>
                             </tr>
+                            <!-- 2. PG사 결제 수수료 -->
                             <tr>
                                 <td class="py-3 px-4 text-left font-bold bg-gray-100 text-gray-800">PG사 결제 수수료</td>
                                 <td class="py-3 px-4 text-red-700 font-bold">결제액의 3 ~ 4%</td>
                                 <td class="py-3 px-4 text-red-700 font-bold">결제액의 3 ~ 4%</td>
                             </tr>
+                            <!-- 3. PG사 초기가입비 -->
                             <tr>
                                 <td class="py-3 px-4 text-left font-bold bg-gray-100 text-gray-800">PG사 초기가입비 (220,000원)</td>
                                 <td class="py-3 px-4">조건부 발생<br>(PG사 정책 및 계약에 따름)</td>
                                 <td class="py-3 px-4 text-red-700 font-bold">초기에 Starter 요금제 선택 시 발생</td>
                             </tr>
+                            <!-- 4. 플랫폼 월 이용료 (PG 면제 옵션) 항목은 요청에 따라 통째로 제거됨 -->
+
+                            <!-- 5. 사이트 관리비 -->
                             <tr>
                                 <td class="py-3 px-4 text-left font-bold bg-gray-100 text-gray-800 border-t border-gray-200">사이트 관리비</td>
                                 <td class="py-3 px-4 text-red-700 font-bold border-t border-gray-200">비용 상승 불가피 (보안/결제 관리)</td>
@@ -422,14 +457,18 @@
             </div>
         </section>
 
+        <!-- V. 최종 권고 및 의사결정 프레임워크 (기존 IV에서 V로 변경) -->
         <section>
             <h2 class="text-3xl font-bold section-header text-blue-800">V. 최종 권고 및 의사결정 프레임워크</h2>
             
             <div class="bg-white p-6 rounded-xl shadow-lg">
+                <!-- H3 일관성 적용 -->
                 <h3 class="text-2xl h3-standard">최종 의사결정 핵심 지표</h3>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- 권고 프레임 -->
                     <div class="p-6 border-2 border-blue-100 rounded-xl bg-blue-50">
+                        <!-- H4 폰트 크기 및 스타일 통일 -->
                         <h4 class="text-xl font-bold text-blue-700 mb-3 flex items-center">
                             <svg class="w-6 h-6 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.27a11.97 11.97 0 010 16.94 11.97 11.97 0 01-16.94 0 11.97 11.97 0 0116.94 0z"></path></svg>
                             워드프레스 선택을 권고하는 경우 (장기적 가치)
@@ -442,14 +481,19 @@
                         </ul>
                     </div>
 
+                    <!-- 대안 프레임 -->
                     <div class="p-6 border-2 border-green-100 rounded-xl bg-green-50">
+                        <!-- H4 폰트 크기 및 스타일 통일 -->
                         <h4 class="text-xl font-bold text-green-700 mb-3 flex items-center">
                             <svg class="w-6 h-6 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 3h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3l-6.928-12c-.77-1.333-2.694-1.333-3.464 0l-6.928 12c-.77 1.333.192 3 1.732 3z"></path></svg>
                             아임웹 선택을 고려하는 경우 (단기적 편의성)
                         </h4>
                         <ul class="list-disc ml-5 space-y-2 text-gray-700">
+                            <!-- 수정된 관리 편의성: 직관적인 편집기 강조 -->
                             <li>관리 편의성: 웹사이트 운영에 <strong>기술적인 시간을 전혀 투자하고 싶지 않으며</strong>, 콘텐츠 수정 시 아임웹의 <strong>직관적인 편집기</strong>를 선호할 때.</li>
+                            <!-- 수정된 입력 폼 데이터 확인 용이성 (플러그인 관련 문구 삭제) -->
                             <li>데이터 관리: 모집 <strong>입력 폼 데이터</strong>를 <strong>플랫폼 내에서 바로 확인</strong>하는 편리함을 원할 때.</li>
+                            <!-- 수정된 런칭 속도: 개발 기간보다는 직관적인 빌더 강조 -->
                             <li>런칭 속도: 개발 기간이 유사하더라도, <strong>템플릿 기반의 직관적인 빌더</strong>로 신속하게 구조를 완성하고 싶을 때.</li>
                             <li>유지보수: 모든 시스템(호스팅/보안/업데이트)을 플랫폼이 <strong>통합 관리</strong>해 주길 원할 때.</li>
                             <li>비용 예측: 월 16,000원 또는 상업 확장 시 월 24,000원 (Pro 요금제) 등 플랫폼 비용이 명확하게 고정되어 투명한 비용 예측을 선호할 때.</li>
@@ -463,6 +507,7 @@
             </div>
         </section>
         
+        <!-- Footer -->
         <footer class="mt-12 p-4 text-center text-sm text-gray-500 border-t border-gray-200">
             &copy; 2025 Platform Selection Consulting Report. All rights reserved.
         </footer>
