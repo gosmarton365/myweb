@@ -11,13 +11,14 @@
             font-family: 'Nanum Square Neo', 'Inter', sans-serif;
             background-color: #f7f9fc;
             line-height: 1.6;
+            font-weight: 400;
         }
         .report-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
-        /* 섹션 헤더 (H2) 스타일 유지 */
+        /* 섹션 헤더 (H2) 스타일 유지 - 섹션 제목 옆에 파란색 세로줄 */
         .section-header {
             border-left: 5px solid #0056b3;
             padding-left: 1rem;
@@ -26,20 +27,21 @@
         }
         /* H3 일관성 적용: 굵은 글씨, 아래 border */
         .h3-standard {
-            font-weight: 800; /* font-extrabold */
-            padding-bottom: 0.5rem; /* pb-2 */
-            margin-bottom: 1rem; /* mb-4 */
-            border-bottom: 2px solid #e5e7eb; /* border-b border-gray-200 */
-            color: #1f2937; /* text-gray-800 */
+            font-size: 1.5rem;
+            font-weight: 800;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e5e7eb;
+            color: #1f2937;
         }
         /* H4 일관성 적용: 굵은 글씨, 얇은 아래 border */
         .h4-standard {
-            font-weight: 700; /* font-bold */
-            padding-bottom: 0.25rem; /* pb-1 */
-            margin-top: 1.5rem; /* mt-6 */
-            margin-bottom: 0.75rem; /* mb-3 */
-            border-bottom: 1px solid #d1d5db; /* border-b border-gray-300 */
-            color: #374151; /* text-gray-700 */
+            font-weight: 700;
+            padding-bottom: 0.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid #d1d5db;
+            color: #374151;
         }
 
         .wp-tag { background-color: #21759b; color: white; }
@@ -48,36 +50,52 @@
         .key-data-card {
             background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
         }
-        /* 모든 테이블에 적용되는 기본 스타일 (요청에 따라 딥 네이비 배경, 흰색 텍스트로 수정) */
+        /* 모든 테이블에 적용되는 기본 스타일 */
         .tco-table th {
-            background-color: #2a4060; /* Deep Navy Blue for professional look */
-            color: #ffffff; /* White text for high contrast */
-            font-weight: 800; /* Extra bold for headers */
+            background-color: #2a4060;
+            color: #ffffff;
+            font-weight: 800;
         }
         .tco-table td, .tco-table th {
             padding: 0.75rem;
-            /* text-align은 개별 th/td에서 조정 */
+            font-weight: 400;
         }
         .tco-table tbody tr:nth-child(odd) {
-            background-color: #f8f9fa; /* 홀수 줄 배경색 */
+            background-color: #f8f9fa;
         }
         .tco-table tbody tr:hover {
-            background-color: #eef2f8; /* Light hover effect */
+            background-color: #eef2f8;
         }
         .highlight-cost {
-            background-color: #fff3cd; /* Light yellow background for cheap cost */
+            background-color: #fff3cd;
             font-weight: 700;
-            color: #856404; /* Darker yellow/brown text */
+            color: #856404;
         }
         /* 섹션 II의 첫 번째 열(요구사항)에 대한 배경색 및 폰트 강제 적용 (tco-table 짝수/홀수 오버라이드) */
         .tco-table tbody td:first-child {
-             background-color: #e8eaf6 !important; /* light indigo background for the key column */
+             background-color: #e8eaf6 !important;
              font-weight: 700;
              color: #1f2937;
         }
         /* 섹션 IV의 비교 테이블 텍스트 사이즈 조정 */
         #section-iv-table td {
-            font-size: 0.9rem; /* Slightly smaller for detailed info */
+            font-size: 0.9rem;
+        }
+        
+        /* 워드프레스 총합 행 스타일 */
+        .wp-total-row {
+            border-top: 2px solid #3b82f6 !important;
+            background-color: #dbeafe !important;
+            font-weight: 900 !important;
+            color: #1e3a8a !important;
+        }
+        
+        /* 아임웹 총합 행 스타일 */
+        .imweb-total-row {
+            border-top: 2px solid #10b981 !important;
+            background-color: #d1fae5 !important;
+            font-weight: 900 !important;
+            color: #065f46 !important;
         }
     </style>
 </head>
@@ -87,7 +105,7 @@
         <!-- Header -->
         <header class="mb-12 p-8 bg-white rounded-xl shadow-fancy border-t-8 border-blue-600">
             <h1 class="text-4xl font-extrabold text-gray-900 mb-2">웹사이트 플랫폼 선정 컨설팅 보고서</h1>
-            <h2 class="text-xl font-light text-blue-600">조명철님 개인 브랜딩 사이트 구축</h2>
+            <h2 class="text-xl font-normal text-blue-600">조명철님 개인 브랜딩 사이트 구축</h2>
             <div class="mt-4 text-sm text-gray-500">
                 <span class="mr-6">문서 번호: CB-2025-09-001</span>
                 <span>작성일: 2025. 09. 30.</span>
@@ -95,25 +113,39 @@
         </header>
 
         <!-- I. 경영진 요약 (Executive Summary) -->
-        <section class="mb-12 p-6 bg-white rounded-xl shadow-lg border-l-4 border-blue-500">
+        <section class="mb-12 p-6 bg-white rounded-xl shadow-lg">
             <h2 class="text-3xl font-bold section-header text-blue-800">I. 경영진 요약 (Executive Summary)</h2>
             <p class="text-lg mb-6">본 보고서는 클라이언트님의 개인 브랜딩 웹사이트 구축을 위한 워드프레스와 아임웹의 비교 분석 결과를 담고 있으며, 장기적 비전과 비용 효율성 측면에서 최적의 플랫폼 선정을 돕는 데 목적이 있습니다.</p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- 4개 카드 그리드 레이아웃 (모든 카드에 괄호 내용 일관성 적용) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 카드 1: WP - 비용 효율성 (약 43만원대) -->
                 <div class="key-data-card p-5 rounded-lg border-t-4 border-blue-600">
-                    <h3 class="text-xl font-bold mb-2">총 비용 효율성</h3>
-                    <p class="text-3xl font-extrabold text-blue-600">워드프레스 <span class="text-base font-normal text-gray-500">(3년 TCO 약 43만원~)</span></p>
-                    <p class="text-sm mt-2 text-gray-600">장기 운영 시 월 유지비가 극히 낮아 가장 경제적입니다.</p>
+                    <h3 class="text-xl font-bold mb-1">총 비용 효율성</h3>
+                    <p class="text-2xl font-extrabold text-blue-600 leading-tight">워드프레스 (약 43만원대)</p>
+                    <!-- text-sm -> text-base, mb-2 -> mt-1 (간격 확보) -->
+                    <p class="text-base font-normal text-gray-500 mt-1 leading-normal">장기 운영 시 월 유지비가 극히 낮아 가장 경제적입니다.</p>
                 </div>
+                <!-- 카드 2: WP - 마케팅 및 확장성 (SEO 및 확장) -->
                 <div class="key-data-card p-5 rounded-lg border-t-4 border-blue-600">
-                    <h3 class="text-xl font-bold mb-2">마케팅 & 확장성</h3>
-                    <p class="text-3xl font-extrabold text-blue-600">워드프레스 <span class="text-base font-normal text-gray-500">(SEO 최적화, 무한 확장)</span></p>
-                    <p class="text-sm mt-2 text-gray-600">검색 엔진 유입 및 향후 전자책/강의 판매 등 비즈니스 확장에 유리합니다.</p>
+                    <h3 class="text-xl font-bold mb-1">마케팅 및 확장성</h3>
+                    <p class="text-2xl font-extrabold text-blue-600 leading-tight">워드프레스 (SEO 및 확장)</p>
+                    <!-- text-sm -> text-base, mb-2 -> mt-1 (간격 확보) -->
+                    <p class="text-base font-normal text-gray-500 mt-1 leading-normal">SEO와 장기적인 비즈니스 확장에 압도적으로 유리합니다.</p>
                 </div>
-                <div class="key-data-card p-5 rounded-lg border-t-4 border-blue-600">
-                    <h3 class="text-xl font-bold mb-2">운영 편의성</h3>
-                    <p class="text-3xl font-extrabold text-green-600">아임웹 <span class="text-base font-normal text-gray-500">(직관적인 관리 시스템)</span></p>
-                    <p class="text-sm mt-2 text-gray-600">웹 지식 없이도 바로 시작 및 관리가 가능하여 초기 부담이 적습니다.</p>
+                <!-- 카드 3: IMWEB - 운영 편의성 (가장 편리) -->
+                <div class="key-data-card p-5 rounded-lg border-t-4 border-green-600">
+                    <h3 class="text-xl font-bold mb-1">운영 편의성</h3>
+                    <p class="text-2xl font-extrabold text-green-600 leading-tight">아임웹 (가장 편리)</p>
+                    <!-- text-sm -> text-base, mb-2 -> mt-1 (간격 확보) -->
+                    <p class="text-base font-normal text-gray-500 mt-1 leading-normal">웹 지식 없이도 직관적인 편집기로 바로 시작 및 관리가 가능합니다.</p>
+                </div>
+                <!-- 카드 4: IMWEB - 신속한 구축 및 유지보수 (통합 유지보수) -->
+                 <div class="key-data-card p-5 rounded-lg border-t-4 border-green-600">
+                    <h3 class="text-xl font-bold mb-1">신속한 구축 및 유지보수</h3>
+                    <p class="text-2xl font-extrabold text-green-600 leading-tight">아임웹 (통합 유지보수)</p>
+                    <!-- text-sm -> text-base, mb-2 -> mt-1 (간격 확보) -->
+                    <p class="text-base font-normal text-gray-500 mt-1 leading-normal">호스팅, 보안, 업데이트를 플랫폼이 일괄 관리하여 유지보수가 편리합니다.</p>
                 </div>
             </div>
         </section>
@@ -121,6 +153,8 @@
         <!-- II. 프로젝트 요구사항 및 기능 충족도 -->
         <section class="mb-12">
             <h2 class="text-3xl font-bold section-header text-blue-800">II. 요구사항 및 기능 충족도</h2>
+            <!-- 요청에 따른 요약 본문 수정 반영 (중립적 표현) -->
+            <p class="text-lg mb-6">본 보고서는 클라이언트님의 목표인 개인 브랜딩 강화와 잠재 고객 및 보험관리사 확보를 위한 기능 충족도를 비교한 결과, **워드프레스(WP)가 마케팅 극대화 및 장기적인 확장성** 측면에서 우세한 것으로 나타났습니다. **아임웹(IMWEB)은 관리 편의성과 유지 보수 편의성 측면에서 우세합니다.**</p>
             
             <div class="bg-white p-6 rounded-xl shadow-lg">
                 <!-- H3 일관성 적용 -->
@@ -141,9 +175,7 @@
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
-                            <!-- tco-table에 의해 행 배경색 및 호버 효과 자동 적용됨 -->
                             <tr>
-                                <!-- 첫 번째 td에 강제 bg-gray-50 대신, style block의 tco-table tbody td:first-child로 통일성 확보 -->
                                 <td class="w-[25%] px-4 py-4 text-left">원페이지/랜딩 페이지 구현</td>
                                 <td class="w-[20%] px-4 py-4 text-center text-sm text-green-600 font-bold">매우 우수 (디자인 자유도 최상)</td>
                                 <td class="w-[20%] px-4 py-4 text-center text-sm text-green-600 font-bold">우수 (템플릿 기반으로 신속 구현)</td>
@@ -182,17 +214,37 @@
         <!-- III. 총 소유 비용 (TCO: Total Cost of Ownership) 분석 -->
         <section class="mb-12">
             <h2 class="text-3xl font-bold section-header text-blue-800">III. 총 소유 비용 (TCO) 분석</h2>
-            <p class="text-lg mb-6">3년 운영 기준으로 도메인 비용을 제외한 플랫폼별 총 소유 비용을 비교했습니다. 워드프레스는 초기 비용 부담이 크지만 장기적으로 경제적이며, 아임웹은 초기 비용 부담은 낮으나 장기 유지 비용이 높은 구조입니다. 도메인은 고객의 선택에 따라 별도로 합산 가능하도록 세부 내역을 제시합니다.</p>
+            <p class="text-lg mb-6">3년 운영 기준으로 플랫폼별 총 소유 비용을 비교했습니다. 워드프레스는 초기 비용 부담이 크지만 장기적으로 경제적이며, 아임웹은 초기 비용 부담은 낮으나 장기 유지 비용이 높은 구조입니다. 도메인 포함 총 비용은 최종 의사결정 시 중요하게 고려되어야 합니다.</p>
 
+            <!-- 1. TCO 최종 요약 (상단으로 이동) - 디자인 및 내용 수정 반영 -->
+            <div class="mb-8 p-6 bg-blue-50 rounded-xl border-t-4 border-blue-600 shadow-lg">
+                <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b-2 border-blue-300 pb-2">최종 3년 총 비용 (TCO, 도메인 포함) 요약</h3>
+                <p class="text-base mb-4 text-gray-700">※ 개발비 등 추정 금액이 포함되어 있으며, 실제 비용은 디자인 난이도에 따라 변동될 수 있습니다. (최소 추정 기준)</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-4 bg-white rounded-lg border-l-4 border-blue-500">
+                        <p class="text-lg font-bold text-gray-800">워드프레스 (최소 추정)</p>
+                        <!-- 만원 단위 반올림 및 '약 ~대' 사용 -->
+                        <p class="text-3xl font-extrabold text-blue-600 leading-tight">약 43만원대</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg border-l-4 border-green-500">
+                        <p class="text-lg font-bold text-gray-800">아임웹 (최소 추정)</p>
+                        <!-- 만원 단위 반올림 및 '약 ~대' 사용 -->
+                        <p class="text-3xl font-extrabold text-green-600 leading-tight">약 81만원대</p>
+                    </div>
+                </div>
+                <p class="text-base mt-4 text-gray-700 bg-gray-100 p-3 rounded-md">
+                    장기적 관점에서 워드프레스가 아임웹 대비 <strong>약 37만원 이상</strong> 비용 효율성이 높은 것으로 추정됩니다.
+                </p>
+            </div>
+            
             <div class="bg-white p-6 rounded-xl shadow-lg">
-                <!-- 1. 초기 비용 비교 (NEW SECTION) - Red Accent 유지 -->
-                <h3 class="text-2xl font-extrabold pb-2 mb-4 text-red-700 border-b-2 border-red-200">1. 초기 개발 및 셋업 비용 비교 (Initial Upfront Cost)</h3>
+                <!-- 2. 초기 비용 비교 -->
+                <h3 class="h3-standard">1. 초기 개발 및 셋업 비용 비교 (Initial Upfront Cost)</h3>
 
                 <div class="overflow-x-auto mb-8">
                     <table class="min-w-full tco-table border border-gray-200 rounded-lg overflow-hidden">
                         <thead>
                             <tr>
-                                <!-- Inline class로 색상 오버라이딩 -->
                                 <th class="py-3 bg-red-100 text-red-800 text-sm w-1/4">항목</th>
                                 <th class="py-3 bg-blue-100 text-blue-800 text-sm w-1/3">워드프레스 (WP)</th>
                                 <th class="py-3 bg-green-100 text-green-800 text-sm w-1/3">아임웹 (IMWEB)</th>
@@ -219,22 +271,103 @@
                                 <td>1,500원 (Cafe24 빌드업 1개월)</td>
                                 <td>16,000원 (아임웹 1개월)</td>
                             </tr>
-                            <tr class="bg-red-200 font-extrabold text-red-900">
-                                <td class="text-left">총 초기 비용 (최소 개발비 기준, 도메인 제외)</td>
-                                <td>315,500원</td>
-                                <td>216,000원</td>
+                            <!-- 요청에 따라 스타일 변경된 행 (총 초기 비용) -->
+                            <tr class="wp-total-row">
+                                <td class="text-left py-4">총 초기 비용 (최소 개발비 기준, 도메인 제외)</td>
+                                <td class="py-4">315,500원</td>
+                                <!-- 아임웹 총 초기 비용도 연한 녹색으로 변경 -->
+                                <td class="py-4 bg-green-100 text-green-900 font-extrabold">216,000원</td>
                             </tr>
                         </tbody>
                     </table>
-                    <p class="mt-4 text-lg text-red-700 font-bold">
+                    <p class="mt-4 p-3 rounded-md text-sm text-gray-700 bg-blue-50 border-l-4 border-blue-400">
                         ✅ 워드프레스는 테마 구매 및 호스팅 설치비 등 1회성 초기 지출 비용이 아임웹 대비 약 10만원 가량 높습니다. (단, 도메인 비용은 미포함)
                     </p>
                 </div>
 
-                <!-- 2. 3년 총 비용 비교 (OLD SECTION, Renamed and renumbered) - H3 일관성 적용 -->
-                <h3 class="text-2xl h3-standard">2. 3년 총 비용 비교 (TCO, 도메인 비용 제외)</h3>
+                <!-- 3. 도메인 구매 비용 상세 분석 -->
+                <div class="mt-8 bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="h3-standard">2. 도메인 구매 비용 상세 분석 (VAT 포함) - 플랫폼별 비교</h3>
+                    
+                    <p class="text-lg mb-4 text-gray-600">관리의 편의성을 위해 WP는 Cafe24, IMWEB은 비용 효율성을 위해 Hosting.kr 시나리오를 적용합니다.</p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Table 1: Cafe24 (2년 계약/갱신) -->
+                        <div>
+                            <h4 class="text-xl font-bold text-blue-700 mb-3 text-center p-2 rounded-t-lg bg-blue-50">Cafe24 도메인 비용 (2년 계약/갱신)</h4>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full tco-table border border-gray-200 rounded-lg overflow-hidden text-left text-sm">
+                                    <thead> 
+                                        <tr>
+                                            <th class="py-3 px-4 font-extrabold w-1/3">도메인 종류</th>
+                                            <th class="py-3 px-4 font-extrabold w-1/3 text-center">계약 기간</th>
+                                            <th class="py-3 px-4 font-extrabold w-1/3 text-right">가격</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="py-2 px-4 text-left">XXXX.KR</td>
+                                            <td class="py-2 px-4 text-center">2년</td>
+                                            <td class="py-2 px-4 text-right">44,000원</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 text-left">XXXX.CO.KR</td>
+                                            <td class="py-2 px-4 text-center">2년</td>
+                                            <td class="py-2 px-4 text-right">44,000원</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 text-left">XXXX.NET</td>
+                                            <td class="py-2 px-4 text-center">2년</td>
+                                            <td class="py-2 px-4 text-right">46,000원</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Table 2: Hosting.kr (최초 등록 1년 비용) -->
+                        <div>
+                            <h4 class="text-xl font-bold text-green-700 mb-3 text-center p-2 rounded-t-lg bg-green-50">Hosting.kr 도메인 비용 (최초 등록 1년)</h4>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full tco-table border border-gray-200 rounded-lg overflow-hidden text-left text-sm">
+                                    <thead>
+                                        <tr>
+                                            <th class="py-3 px-4 font-extrabold w-1/3">도메인 종류</th>
+                                            <th class="py-3 px-4 font-extrabold w-1/3 text-center">계약 기간</th>
+                                            <th class="py-3 px-4 font-extrabold w-1/3 text-right">가격</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="py-2 px-4 text-left">XXXX.KR</td>
+                                            <td class="py-2 px-4 text-center highlight-cost">1년</td>
+                                            <td class="py-2 px-4 text-right highlight-cost">9,800원</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 text-left">XXXX.CO.KR</td>
+                                            <td class="py-2 px-4 text-center highlight-cost">1년</td>
+                                            <td class="py-2 px-4 text-right highlight-cost">9,800원</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 text-left">XXXX.NET</td>
+                                            <td class="py-2 px-4 text-center highlight-cost">1년</td>
+                                            <td class="py-2 px-4 text-right highlight-cost">17,700원</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div> <!-- End of grid -->
+                    
+                    <p class="mt-4 p-3 rounded-md text-sm text-gray-700 bg-blue-50 border-l-4 border-blue-400">
+                        💡 Hosting.kr은 최초 등록 비용이 저렴하며, 고객님 요청에 따라 갱신 비용도 9,800원으로 동일하게 적용하여 3년 총 비용을 산출했습니다. Cafe24는 호스팅과의 통합 관리 편리성이 가장 큰 장점입니다.
+                    </p>
+                </div>
+
+                <!-- 4. 3년 총 비용 비교 -->
+                <h3 class="h3-standard mt-8">3. 3년 총 비용 상세 비교 (TCO, 도메인 포함)</h3>
                 
-                <!-- 수정: lg:grid-cols-2를 md:grid-cols-2로 변경하여 더 작은 화면에서도 가로로 배치되게 함 -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- WordPress TCO -->
                     <div>
@@ -244,39 +377,44 @@
                         <table class="min-w-full tco-table border border-gray-200 rounded-lg overflow-hidden">
                             <thead>
                                 <tr>
-                                    <!-- Inline class로 색상 오버라이딩 -->
                                     <th colspan="2" class="py-3 bg-blue-100 text-blue-800 text-sm">항목</th>
+                                    <!-- 실제 추정 비용이므로 백원단위 유지 -->
                                     <th class="py-3 bg-blue-100 text-blue-800 text-sm">비용 (3년 합산, VAT 별도)</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- 순서 변경 시작: [개발비] -> [호스팅 월 이용료] -> [테마 구입비] -> [호스팅 설치비] -->
                                 <tr>
                                     <td colspan="2" class="text-left">개발비 (원페이지)</td>
-                                    <td>200,000 ~ 300,000원</td>
+                                    <td>200,000원 ~ 300,000원</td>
                                 </tr>
                                 <tr>
-                                    <!-- 호스팅 월 이용료를 두 번째로 배치 -->
                                     <td colspan="2" class="text-left">호스팅 월 이용료 (36개월)</td>
                                     <td>54,000원 (1,500원/월 * 36)</td>
                                 </tr>
                                 <tr>
-                                    <!-- 테마 구입비를 세 번째로 배치 -->
                                     <td colspan="2" class="text-left">테마 구입비 (최초 1회)</td>
                                     <td>약 104,000원 ($80, 1회)</td>
                                 </tr>
                                 <tr>
-                                    <!-- 호스팅 설치비를 네 번째로 배치 -->
                                     <td colspan="2" class="text-left">호스팅 설치비 (최초 1회)</td>
                                     <td>10,000원</td>
+                                }
+                                <tr class="bg-gray-100 text-gray-700 font-bold">
+                                    <td colspan="2" class="text-left">도메인 (.KR 3년 기준, Cafe24)</td>
+                                    <td>66,000원 (총 3년 운영에 필요한 금액)</td>
                                 </tr>
-                                <!-- 순서 변경 끝 -->
-                                <tr class="bg-blue-200 font-extrabold text-blue-900">
-                                    <td colspan="2">총합 (3년 TCO, 도메인 제외)</td>
-                                    <td>368,000 ~ 468,000원</td>
-                                </tr>
+                                <!-- 워드프레스 총합 TCO 행 스타일 -->
+                                <tr class="wp-total-row">
+                                    <td colspan="2">총합 (3년 TCO, 도메인 포함)</td>
+                                    <!-- 실제 계산된 비용을 명확히 제시 -->
+                                    <td>434,000 ~ 534,000원</td>
+                                }
                             </tbody>
                         </table>
+
+                        <p class="mt-4 p-3 rounded-md text-sm text-gray-700 bg-blue-50 border-l-4 border-blue-400">
+                            * WP 도메인 비용(66,000원)은 Cafe24 .KR 2년 계약(44,000원)과 2년 후 갱신 시 예상되는 2년 계약금액(44,000원) 중 1년 치 금액인 22,000원을 합산하여 산출한 금액입니다.
+                        </p>
                     </div>
 
                     <!-- IMWEB TCO -->
@@ -287,138 +425,57 @@
                         <table class="min-w-full tco-table border border-gray-200 rounded-lg overflow-hidden">
                             <thead>
                                 <tr>
-                                    <!-- Inline class로 색상 오버라이딩 -->
                                     <th colspan="2" class="py-3 bg-green-100 text-green-800 text-sm">항목</th>
+                                    <!-- 실제 추정 비용이므로 백원단위 유지 -->
                                     <th class="py-3 bg-green-100 text-green-800 text-sm">비용 (3년 합산, VAT 별도)</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- 순서 변경 시작: [개발비] -> [플랫폼 이용료] -> [테마 구입비] -> [호스팅 설치비] -->
                                 <tr>
                                     <td colspan="2" class="text-left">개발비 (원페이지)</td>
-                                    <td>200,000 ~ 300,000원</td>
+                                    <td>200,000원 ~ 300,000원</td>
                                 </tr>
                                 <tr>
-                                    <!-- 플랫폼 이용료를 두 번째로 배치 -->
                                     <td colspan="2" class="text-left">플랫폼 이용료 (36개월)</td>
                                     <td>576,000원 (16,000원/월 * 36)</td>
                                 </tr>
                                 <tr>
-                                    <!-- 테마 구입비를 세 번째로 배치 (0원 처리) -->
                                     <td colspan="2" class="text-left text-gray-500">테마 구입비 (최초 1회)</td>
                                     <td>0원 (템플릿 무료 사용 기준)</td>
                                 </tr>
                                 <tr>
-                                    <!-- 호스팅 설치비를 네 번째로 배치 (0원 처리) -->
                                     <td colspan="2" class="text-left text-gray-500">호스팅 설치비 (최초 1회)</td>
                                     <td>0원 (플랫폼 이용료에 포함)</td>
                                 </tr>
-                                <!-- 순서 변경 끝 -->
-                                <tr class="bg-green-200 font-extrabold text-green-900">
-                                    <td colspan="2">총합 (3년 TCO, 도메인 제외)</td>
-                                    <td>776,000 ~ 876,000원</td>
+                                <tr class="bg-gray-100 text-gray-700 font-bold">
+                                    <td colspan="2" class="text-left">도메인 (.KR 3년 기준, Hosting.kr)</td>
+                                    <td>29,400원 (9,800원/년 * 3년)</td>
+                                </tr>
+                                <!-- 아임웹 총합 TCO 행 스타일 -->
+                                <tr class="imweb-total-row">
+                                    <td colspan="2">총합 (3년 TCO, 도메인 포함)</td>
+                                    <!-- 실제 계산된 비용을 명확히 제시 -->
+                                    <td>805,400 ~ 905,400원</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-            
-            <!-- 도메인 구매 비용 상세 분석 섹션: 표를 2개로 나누고 가로 배치 (요청 사항 반영) -->
-            <div class="mt-8 bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-500">
-                <!-- H3 일관성 적용 -->
-                <h3 class="text-2xl h3-standard">3. 도메인 구매 비용 상세 분석 (VAT 포함) - 플랫폼별 비교</h3>
-                <p class="text-lg mb-4 text-gray-600">각 제공사의 계약 기간이 다르므로, 플랫폼별 표를 나누어 비교합니다. (Hosting.kr은 최저가 등록 기준)</p>
-
-                <!-- 가로로 나란히 배치하기 위한 그리드 컨테이너 (sm:grid-cols-2로 수정하여 태블릿/데스크톱에서 항상 나란히 배치) -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-
-                    <!-- Table 1: Cafe24 (2년 계약/갱신) -->
-                    <div>
-                        <h4 class="text-xl font-bold text-blue-700 mb-3 text-center p-2 rounded-t-lg bg-blue-50">Cafe24 도메인 비용 (2년 계약/갱신)</h4>
-                        <div class="overflow-x-auto">
-                            <table class="min-w-full tco-table border border-gray-200 rounded-lg overflow-hidden text-left text-sm">
-                                <thead> 
-                                    <tr>
-                                        <th class="py-3 px-4 font-extrabold w-1/3">도메인 종류</th>
-                                        <th class="py-3 px-4 font-extrabold w-1/3 text-center">계약 기간</th>
-                                        <th class="py-3 px-4 font-extrabold w-1/3 text-right">가격</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="py-2 px-4 text-left">XXXX.KR</td>
-                                        <td class="py-2 px-4 text-center">2년</td>
-                                        <td class="py-2 px-4 text-right">44,000원</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-4 text-left">XXXX.CO.KR</td>
-                                        <td class="py-2 px-4 text-center">2년</td>
-                                        <td class="py-2 px-4 text-right">44,000원</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-4 text-left">XXXX.NET</td>
-                                        <td class="py-2 px-4 text-center">2년</td>
-                                        <td class="py-2 px-4 text-right">46,000원</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- Table 2: Hosting.kr (최초 등록 1년 비용) -->
-                    <div>
-                        <h4 class="text-xl font-bold text-green-700 mb-3 text-center p-2 rounded-t-lg bg-green-50">Hosting.kr 도메인 비용 (최초 등록 1년)</h4>
-                        <div class="overflow-x-auto">
-                            <table class="min-w-full tco-table border border-gray-200 rounded-lg overflow-hidden text-left text-sm">
-                                <thead>
-                                    <tr>
-                                        <th class="py-3 px-4 font-extrabold w-1/3">도메인 종류</th>
-                                        <th class="py-3 px-4 font-extrabold w-1/3 text-center">계약 기간</th>
-                                        <th class="py-3 px-4 font-extrabold w-1/3 text-right">가격</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="py-2 px-4 text-left">XXXX.KR</td>
-                                        <td class="py-2 px-4 text-center highlight-cost">1년</td>
-                                        <td class="py-2 px-4 text-right highlight-cost">9,800원</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-4 text-left">XXXX.CO.KR</td>
-                                        <td class="py-2 px-4 text-center highlight-cost">1년</td>
-                                        <td class="py-2 px-4 text-right highlight-cost">9,800원</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-4 text-left">XXXX.NET</td>
-                                        <td class="py-2 px-4 text-center highlight-cost">1년</td>
-                                        <td class="py-2 px-4 text-right highlight-cost">17,700원</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                </div> <!-- End of grid -->
-                
-                <!-- 수정된 문구: 갱신 비용이 계속 저렴하다는 정보를 반영 -->
-                <p class="mt-4 p-3 rounded-md text-sm text-gray-700 font-bold bg-yellow-100 border-l-4 border-yellow-400">
-                    💡 <strong>Hosting.kr</strong>은 최초 등록 비용뿐만 아니라 갱신 비용도 저렴하게 유지되어 <strong>장기적인 비용 절감</strong>에 유리합니다. <strong>Cafe24</strong>는 <strong>호스팅과의 통합 관리 편리성</strong>이 가장 큰 장점입니다.
-                </p>
-            </div>
         </section>
 
-        <!-- IV. 향후 확장성 및 추가 비용 분석 (Future Expansion & Cost) - 사용자님 자료 기반으로 전면 수정 -->
+        <!-- IV. 향후 확장성 및 추가 비용 분석 (Future Expansion & Cost) -->
         <section class="mb-12">
             <h2 class="text-3xl font-bold section-header text-blue-800">IV. 향후 확장성 및 추가 비용 분석 (전자책/강의 판매 등 상업적 확장 시)</h2>
-            <p class="text-lg mb-6 text-red-700 font-bold">전자상거래 기능을 추가할 경우, 별도의 추가 개발 비용이 발생하고, 사이트 관리 비용 상승이 불가피합니다. 기존 플랫폼/호스팅 이용료는 제외한 추가 비용을 비교합니다.</p>
+            <!-- IV 섹션 본문 색상 통일 (text-red-700 제거) -->
+            <p class="text-lg mb-6">전자상거래 기능을 추가할 경우, 별도의 추가 개발 비용이 발생하고, 사이트 관리 비용 상승이 불가피합니다. 기존 플랫폼/호스팅 이용료는 제외한 추가 비용을 비교합니다.</p>
             
             <div class="bg-white p-6 rounded-xl shadow-lg">
                 
-                <!-- NEW: Disclaimer / Cost Warning (요청에 따라 '최저 비용'으로, 폰트 크기 조정됨) -->
-                <p class="p-4 mb-6 text-base font-bold text-red-800 bg-red-100 rounded-lg border-l-4 border-red-500">
-                    🚨 중요 고지: 아래 제시된 '추가 개발비'는 전자상거래 기능 연동을 위한 <strong>최저 비용(Minimum Cost)</strong>입니다.<br>
-                    실제 요구사항 및 디자인 난이도에 따라 개발 비용은 <strong>1,000,000원 이상으로 크게 증가할 수 있음</strong>을 염두에 두셔야 합니다.
+                <!-- NEW: Disclaimer / Cost Warning -->
+                <p class="p-4 mb-6 text-base text-red-800 bg-red-100 rounded-lg border-l-4 border-red-500">
+                    🚨 중요 고지: 아래 제시된 '추가 개발비'는 전자상거래 기능 연동을 위한 최저 비용(Minimum Cost)입니다.<br>
+                    실제 요구사항 및 디자인 난이도에 따라 개발 비용은 1,000,000원 이상으로 크게 증가할 수 있음을 염두에 두셔야 합니다.
                 </p>
 
                 <h3 class="text-2xl h3-standard">1. 상업적 기능 확장 비용 비교 (전자상거래 기능 추가 시)</h3>
@@ -435,34 +492,32 @@
                             <!-- 1. 추가 개발비 -->
                             <tr>
                                 <td class="py-3 px-4 text-left font-bold bg-gray-100 text-gray-800">추가 개발비 (최저)</td>
-                                <td class="py-3 px-4 font-bold text-red-700">600,000원 ~</td>
-                                <td class="py-3 px-4 font-bold text-red-700">700,000원 ~</td>
+                                <td class="py-3 px-4 text-red-700">600,000원 ~</td>
+                                <td class="py-3 px-4 text-red-700">700,000원 ~</td>
                             </tr>
                             <!-- 2. PG사 결제 수수료 -->
                             <tr>
                                 <td class="py-3 px-4 text-left font-bold bg-gray-100 text-gray-800">PG사 결제 수수료</td>
-                                <td class="py-3 px-4 text-red-700 font-bold">결제액의 3 ~ 4%</td>
-                                <td class="py-3 px-4 text-red-700 font-bold">결제액의 3 ~ 4%</td>
+                                <td class="py-3 px-4 text-red-700">결제액의 3 ~ 4%</td>
+                                <td class="py-3 px-4 text-red-700">결제액의 3 ~ 4%</td>
                             </tr>
                             <!-- 3. PG사 초기가입비 -->
                             <tr>
-                                <td class="py-3 px-4 text-left font-bold bg-gray-100 text-gray-800">PG사 초기가입비 (220,000원)</td>
+                                <td class="py-3 px-4 text-left font-bold bg-gray-100 text-gray-800">PG사 초기가입비</td>
                                 <td class="py-3 px-4">조건부 발생<br>(PG사 정책 및 계약에 따름)</td>
-                                <td class="py-3 px-4 text-red-700 font-bold">초기에 Starter 요금제 선택 시 발생</td>
+                                <td class="py-3 px-4 text-red-700">220,000원<br>(초기에 Starter 요금제 선택 시 발생)</td>
                             </tr>
-                            <!-- 4. 플랫폼 월 이용료 (PG 면제 옵션) 항목은 요청에 따라 통째로 제거됨 -->
-
                             <!-- 5. 사이트 관리비 -->
                             <tr>
                                 <td class="py-3 px-4 text-left font-bold bg-gray-100 text-gray-800 border-t border-gray-200">사이트 관리비</td>
-                                <td class="py-3 px-4 text-red-700 font-bold border-t border-gray-200">비용 상승 불가피 (보안/결제 관리)</td>
-                                <td class="py-3 px-4 text-red-700 font-bold border-t border-gray-200">비용 상승 불가피 (보안/결제 관리)</td>
+                                <td class="py-3 px-4 text-red-700 border-t border-gray-200">비용 상승 불가피 (보안/결제 관리)</td>
+                                <td class="py-3 px-4 text-red-700 border-t border-gray-200">비용 상승 불가피 (보안/결제 관리)</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 
-                <p class="mt-4 p-3 rounded-md text-sm text-gray-700 font-bold bg-blue-50 border-l-4 border-blue-400">
+                <p class="mt-4 p-3 rounded-md text-sm text-gray-700 bg-blue-50 border-l-4 border-blue-400">
                     ✅ 아임웹은 초기 Starter 요금제(월 16,000원)로 개발 시, PG 가입비 220,000원을 납부해야 합니다. 만약 이를 절감하고 싶다면 초기부터 Pro 요금제(월 24,000원)를 선택해야 합니다.
                 </p>
             </div>
@@ -479,13 +534,12 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- 권고 프레임 -->
                     <div class="p-6 border-2 border-blue-100 rounded-xl bg-blue-50">
-                        <!-- H4 폰트 크기 및 스타일 통일 -->
                         <h4 class="text-xl font-bold text-blue-700 mb-3 flex items-center">
                             <svg class="w-6 h-6 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.27a11.97 11.97 0 010 16.94 11.97 11.97 0 01-16.94 0 11.97 11.97 0 0116.94 0z"></path></svg>
                             워드프레스 선택을 권고하는 경우 (장기적 가치)
                         </h4>
-                        <ul class="list-disc ml-5 space-y-2 text-gray-700">
-                            <li>비용 효율성: 3년 운영 시 아임웹 대비 약 38만원 이상 절약을 원할 때 (확장 전 기준).</li>
+                        <ul class="list-disc ml-6 space-y-2 text-gray-700">
+                            <li>비용 효율성: 3년 운영 시 아임웹 대비 약 37만원 이상 절약을 원할 때 (확장 전 기준, 도메인 포함).</li>
                             <li>마케팅 극대화: 구글 등 검색 엔진을 통한 잠재 고객 유입이 중요하며, 고급 SEO 최적화가 필요할 때.</li>
                             <li>비즈니스 확장: 향후 전자책, 온라인 강의, 멤버십 등 수익 모델 추가 가능성을 고려할 때. 무제한적인 기능 추가가 필요하다면 워드프레스가 유리합니다.</li>
                             <li>소유권: 웹사이트 데이터와 플랫폼에 대한 완전한 소유권을 확보하고 싶을 때.</li>
@@ -494,17 +548,13 @@
 
                     <!-- 대안 프레임 -->
                     <div class="p-6 border-2 border-green-100 rounded-xl bg-green-50">
-                        <!-- H4 폰트 크기 및 스타일 통일 -->
                         <h4 class="text-xl font-bold text-green-700 mb-3 flex items-center">
                             <svg class="w-6 h-6 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 3h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3l-6.928-12c-.77-1.333-2.694-1.333-3.464 0l-6.928 12c-.77 1.333.192 3 1.732 3z"></path></svg>
                             아임웹 선택을 고려하는 경우 (단기적 편의성)
                         </h4>
-                        <ul class="list-disc ml-5 space-y-2 text-gray-700">
-                            <!-- 수정된 관리 편의성: 직관적인 편집기 강조 -->
+                        <ul class="list-disc ml-6 space-y-2 text-gray-700">
                             <li>관리 편의성: 웹사이트 운영에 <strong>기술적인 시간을 전혀 투자하고 싶지 않으며</strong>, 콘텐츠 수정 시 아임웹의 <strong>직관적인 편집기</strong>를 선호할 때.</li>
-                            <!-- 수정된 입력 폼 데이터 확인 용이성 (플러그인 관련 문구 삭제) -->
                             <li>데이터 관리: 모집 <strong>입력 폼 데이터</strong>를 <strong>플랫폼 내에서 바로 확인</strong>하는 편리함을 원할 때.</li>
-                            <!-- 수정된 런칭 속도: 개발 기간보다는 직관적인 빌더 강조 -->
                             <li>런칭 속도: 개발 기간이 유사하더라도, <strong>템플릿 기반의 직관적인 빌더</strong>로 신속하게 구조를 완성하고 싶을 때.</li>
                             <li>유지보수: 모든 시스템(호스팅/보안/업데이트)을 플랫폼이 <strong>통합 관리</strong>해 주길 원할 때.</li>
                             <li>비용 예측: 월 16,000원 또는 상업 확장 시 월 24,000원 (Pro 요금제) 등 플랫폼 비용이 명확하게 고정되어 투명한 비용 예측을 선호할 때.</li>
@@ -513,11 +563,11 @@
                 </div>
 
                 <div class="mt-8 p-4 bg-gray-100 rounded-lg text-center">
-                    <p class="text-xl font-bold text-gray-800">최종 결정은 클라이언트의 <span class="text-blue-600">장기 비전</span>과 <span class="text-blue-600">운영 역량</span>에 따라 달라집니다.</p>
+                    <p class="text-xl font-bold text-gray-800">최종 결정은 클라이언트의 <span class="text-blue-600">주요 목표와 내부 관리 역량</span>에 따라 달라집니다.</p>
                 </div>
             </div>
         </section>
-        
+
         <!-- Footer -->
         <footer class="mt-12 p-4 text-center text-sm text-gray-500 border-t border-gray-200">
             &copy; 2025 Platform Selection Consulting Report. All rights reserved.
