@@ -77,10 +77,6 @@
              font-weight: 700;
              color: #1f2937;
         }
-        /* 섹션 IV의 비교 테이블 텍스트 사이즈 조정 */
-        #section-iv-table td {
-            font-size: 0.9rem;
-        }
         
         /* 워드프레스 총합 행 스타일 */
         .wp-total-row {
@@ -96,6 +92,14 @@
             background-color: #d1fae5 !important;
             font-weight: 900 !important;
             color: #065f46 !important;
+        }
+        
+        /* 확장 비용을 강조하는 행 스타일 */
+        .expansion-cost-row {
+            background-color: #fef3c7 !important; /* Yellow-100 */
+            font-weight: 800 !important;
+            color: #92400e !important; /* Amber-800 */
+            border-bottom: 1px solid #fde68a;
         }
     </style>
 </head>
@@ -117,34 +121,30 @@
             <h2 class="text-3xl font-bold section-header text-blue-800">I. 경영진 요약 (Executive Summary)</h2>
             <p class="text-lg mb-6">본 보고서는 클라이언트님의 개인 브랜딩 웹사이트 구축을 위한 워드프레스와 아임웹의 비교 분석 결과를 담고 있으며, 장기적 비전과 비용 효율성 측면에서 최적의 플랫폼 선정을 돕는 데 목적이 있습니다.</p>
 
-            <!-- 4개 카드 그리드 레이아웃 (모든 카드에 괄호 내용 일관성 적용) -->
+            <!-- 4개 카드 그리드 레이아웃 -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- 카드 1: WP - 비용 효율성 (약 43만원대) -->
                 <div class="key-data-card p-5 rounded-lg border-t-4 border-blue-600">
-                    <h3 class="text-xl font-bold mb-1">총 비용 효율성</h3>
+                    <h3 class="text-xl font-bold mb-1">총 비용 효율성 (기본)</h3>
                     <p class="text-2xl font-extrabold text-blue-600 leading-tight">워드프레스 (약 43만원대)</p>
-                    <!-- text-sm -> text-base, mb-2 -> mt-1 (간격 확보) -->
                     <p class="text-base font-normal text-gray-500 mt-1 leading-normal">장기 운영 시 월 유지비가 극히 낮아 가장 경제적입니다.</p>
                 </div>
                 <!-- 카드 2: WP - 마케팅 및 확장성 (SEO 및 확장) -->
                 <div class="key-data-card p-5 rounded-lg border-t-4 border-blue-600">
                     <h3 class="text-xl font-bold mb-1">마케팅 및 확장성</h3>
                     <p class="text-2xl font-extrabold text-blue-600 leading-tight">워드프레스 (SEO 및 확장)</p>
-                    <!-- text-sm -> text-base, mb-2 -> mt-1 (간격 확보) -->
                     <p class="text-base font-normal text-gray-500 mt-1 leading-normal">SEO와 장기적인 비즈니스 확장에 압도적으로 유리합니다.</p>
                 </div>
                 <!-- 카드 3: IMWEB - 운영 편의성 (가장 편리) -->
                 <div class="key-data-card p-5 rounded-lg border-t-4 border-green-600">
                     <h3 class="text-xl font-bold mb-1">운영 편의성</h3>
                     <p class="text-2xl font-extrabold text-green-600 leading-tight">아임웹 (가장 편리)</p>
-                    <!-- text-sm -> text-base, mb-2 -> mt-1 (간격 확보) -->
                     <p class="text-base font-normal text-gray-500 mt-1 leading-normal">웹 지식 없이도 직관적인 편집기로 바로 시작 및 관리가 가능합니다.</p>
                 </div>
                 <!-- 카드 4: IMWEB - 신속한 구축 및 유지보수 (통합 유지보수) -->
                  <div class="key-data-card p-5 rounded-lg border-t-4 border-green-600">
                     <h3 class="text-xl font-bold mb-1">신속한 구축 및 유지보수</h3>
                     <p class="text-2xl font-extrabold text-green-600 leading-tight">아임웹 (통합 유지보수)</p>
-                    <!-- text-sm -> text-base, mb-2 -> mt-1 (간격 확보) -->
                     <p class="text-base font-normal text-gray-500 mt-1 leading-normal">호스팅, 보안, 업데이트를 플랫폼이 일괄 관리하여 유지보수가 편리합니다.</p>
                 </div>
             </div>
@@ -153,7 +153,6 @@
         <!-- II. 프로젝트 요구사항 및 기능 충족도 -->
         <section class="mb-12">
             <h2 class="text-3xl font-bold section-header text-blue-800">II. 요구사항 및 기능 충족도</h2>
-            <!-- 요청에 따른 요약 본문 수정 반영 (중립적 표현) -->
             <p class="text-lg mb-6">본 보고서는 클라이언트님의 목표인 개인 브랜딩 강화와 잠재 고객 및 보험관리사 확보를 위한 기능 충족도를 비교한 결과, **워드프레스(WP)가 마케팅 극대화 및 장기적인 확장성** 측면에서 우세한 것으로 나타났습니다. **아임웹(IMWEB)은 관리 편의성과 유지 보수 편의성 측면에서 우세합니다.**</p>
             
             <div class="bg-white p-6 rounded-xl shadow-lg">
@@ -213,10 +212,10 @@
 
         <!-- III. 총 소유 비용 (TCO: Total Cost of Ownership) 분석 -->
         <section class="mb-12">
-            <h2 class="text-3xl font-bold section-header text-blue-800">III. 총 소유 비용 (TCO) 분석</h2>
+            <h2 class="text-3xl font-bold section-header text-blue-800">III. 총 소유 비용 (TCO) 분석 - 기본 구축 비용</h2>
             <p class="text-lg mb-6">3년 운영 기준으로 플랫폼별 총 소유 비용을 비교했습니다. 워드프레스는 초기 비용 부담이 크지만 장기적으로 경제적이며, 아임웹은 초기 비용 부담은 낮으나 장기 유지 비용이 높은 구조입니다. 도메인 포함 총 비용은 최종 의사결정 시 중요하게 고려되어야 합니다.</p>
 
-            <!-- 1. TCO 최종 요약 (상단으로 이동) - 디자인 및 내용 수정 반영 -->
+            <!-- 1. TCO 최종 요약 (상단으로 이동) -->
             <div class="mb-8 p-6 bg-blue-50 rounded-xl border-t-4 border-blue-600 shadow-lg">
                 <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b-2 border-blue-300 pb-2">최종 3년 총 비용 (TCO, 도메인 포함) 요약</h3>
                 <p class="text-base mb-4 text-gray-700">※ 개발비 등 추정 금액이 포함되어 있으며, 실제 비용은 디자인 난이도에 따라 변동될 수 있습니다. (최소 추정 기준)</p>
@@ -464,8 +463,80 @@
             </div>
         </section>
 
+        <!-- IV. 향후 비즈니스 확장 시 비용 분석 (이커머스) - 고객님 요청에 따른 세부 비용 반영 -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold section-header text-blue-800">IV. 향후 비즈니스 확장 시 비용 분석 (이커머스 기능 추가)</h2>
+            <p class="text-lg mb-6">개인 브랜딩 사이트 운영 후 <strong>전자상거래 기능(전자책, 강의 등)</strong>을 추가할 경우 발생하는 <strong>추가 개발비 및 PG사 가입 비용</strong>을 비교 분석했습니다. <strong>가장 큰 비용은 추가 개발비이며, 아임웹의 PG사 가입비 정책에 따라 총 비용이 크게 달라집니다.</strong></p>
+            
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-2xl h3-standard">이커머스 기능 추가 시 주요 비용 비교</h3>
+                
+                <div class="overflow-x-auto mb-8">
+                    <table class="min-w-full tco-table border border-gray-200 rounded-lg overflow-hidden">
+                        <thead>
+                            <tr>
+                                <th class="py-3 bg-red-100 text-red-800 text-sm w-1/4">구분</th>
+                                <th class="py-3 bg-blue-100 text-blue-800 text-sm w-1/3">워드프레스 (WP)</th>
+                                <th class="py-3 bg-green-100 text-green-800 text-sm w-1/3">아임웹 (IMWEB)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 추가 개발 비용 강조 -->
+                            <tr class="expansion-cost-row">
+                                <td class="text-left">추가 개발 비용 (최소 추정)</td>
+                                <td class="text-blue-800">600,000원 ~</td>
+                                <td class="text-green-800">700,000원 ~</td>
+                            </tr>
+                            
+                            <!-- PG사 가입비 및 연회비 -->
+                            <tr>
+                                <td class="text-left">PG사 초기가입비</td>
+                                <td class="highlight-cost">대부분 면제이나, 일부 유료 (최대 220,000원)</td>
+                                <td class="highlight-cost">요금제에 따라 면제 또는 220,000원 발생</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">PG사 연회비</td>
+                                <td>대부분 없음</td>
+                                <td>없음</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">PG사 결제 수수료</td>
+                                <td>결제 금액의 3%~4% (자동 차감)</td>
+                                <td>결제 금액의 3%~4% (자동 차감)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">플랫폼/호스팅 비용</td>
+                                <td>1,500원/월 (변동 없음)</td>
+                                <td>16,000원/월 (Starter 유지 가능)</td>
+                            </tr>
+                             <!-- 확장 후 3년 TCO 총합 (개발비 포함) -->
+                            <tr class="wp-total-row">
+                                <td class="text-left py-4">확장 후 3년 TCO 총합 (최소 비용 기준)</td>
+                                <!-- WP: Base TCO 434,000 + Dev 600,000 + PG 0 (가장 일반적) = 1,034,000원 -->
+                                <td class="py-4">약 1,034,000원 (PG가입비 면제 시)</td>
+                                <!-- IMWEB: Base TCO 805,400 + Dev 700,000 + PG 220,000 (Starter 선택시) = 1,725,400원 -->
+                                <td class="py-4 imweb-total-row">약 1,725,400원 (Starter 유지 + PG 가입비 지불 시)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 고객님 요청하신 상세 설명 문구 복원 및 정리 -->
+                <div class="space-y-4 p-4 rounded-lg bg-blue-50 border-l-4 border-blue-400">
+                    <h4 class="text-lg font-extrabold text-blue-800">핵심 분석: 아임웹 PG 가입비 조건 및 TCO</h4>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <li><span class="font-bold text-blue-600">추가 개발비:</span> 두 플랫폼 모두 이커머스 기능 추가 시 <strong>60만원~70만원 이상</strong>의 추가 개발비가 발생하며, 이것이 단일 항목 중 가장 큰 초기 지출입니다.</li>
+                        <li><span class="font-bold text-green-600">아임웹 PG 가입비:</span> 아임웹은 이커머스 기능을 위해 Starter 요금제를 계속 사용할 수 있지만, PG 결제 기능을 처음 도입할 때 <strong>PG 가입비(220,000원)</strong>가 발생합니다.</li>
+                        <li><span class="font-bold text-green-600">아임웹 비용 절감 팁:</span> PG 가입비를 면제받으려면, 초기 개발 시점에 <strong>Pro 요금제</strong>를 선택해야 합니다. 이 점을 고려하여 PG 가입비 지불 비용과 Pro 요금제 월 이용료를 비교해 총 초기 비용을 최적화할 필요가 있습니다.</li>
+                        <li><span class="font-bold">결론:</span> 워드프레스는 확장 시에도 월 호스팅 비용 변동이 거의 없어 <strong>100만원 초반대</strong>로 확장이 가능하지만, 아임웹은 PG 가입비(22만원)가 추가될 경우 TCO가 <strong>170만원대</strong>까지 상승할 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <!-- V. 최종 권고 및 의사결정 프레임워크 (기존 IV에서 V로 변경) -->
         <section>
+            <!-- 섹션 번호는 V로 유지 -->
             <h2 class="text-3xl font-bold section-header text-blue-800">V. 최종 권고 및 의사결정 프레임워크</h2>
             
             <div class="bg-white p-6 rounded-xl shadow-lg">
@@ -473,7 +544,7 @@
                 <h3 class="text-2xl h3-standard">최종 의사결정 핵심 지표</h3>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- 권고 프레임 (워드프레스) - 디자인 수정 반영 -->
+                    <!-- 권고 프레임 (워드프레스) -->
                     <div class="p-6 border-2 border-blue-100 rounded-xl bg-blue-50">
                         <!-- 타이틀 중앙 정렬 적용: text-center 추가 -->
                         <h4 class="text-xl font-bold text-blue-700 flex items-center justify-center mb-4 text-center">
@@ -491,7 +562,7 @@
                             <!-- 키워드와 설명 분리 및 키워드 강조 -->
                             <div>
                                 <h5 class="text-lg font-extrabold text-blue-600">1. 비용 효율성</h5>
-                                <p class="text-sm">3년 운영 시 아임웹 대비 약 37만원 이상 절약을 원할 때 (확장 전 기준, 도메인 포함).</p>
+                                <p class="text-sm">기본 운영 시 아임웹 대비 저렴하며, 이커머스 기능 확장 시에도 <strong>PG 가입비가 면제될 가능성이 높음</strong>.</p>
                             </div>
                             <div>
                                 <h5 class="text-lg font-extrabold text-blue-600">2. 마케팅 극대화 / SEO</h5>
@@ -499,7 +570,7 @@
                             </div>
                             <div>
                                 <h5 class="text-lg font-extrabold text-blue-600">3. 비즈니스 확장성</h5>
-                                <p class="text-sm">향후 전자책, 온라인 강의, 멤버십 등 수익 모델 추가 가능성을 고려할 때. 무제한적인 기능 추가가 필요하다면 워드프레스가 유리합니다.</p>
+                                <p class="text-sm">향후 전자책, 온라인 강의, 멤버십 등 수익 모델 추가 가능성을 고려할 때. WP는 추가 비용 변동 없이 무제한 기능 추가가 가능합니다.</p>
                             </div>
                             <div>
                                 <h5 class="text-lg font-extrabold text-blue-600">4. 데이터 소유권</h5>
@@ -508,7 +579,7 @@
                         </div>
                     </div>
 
-                    <!-- 대안 프레임 (아임웹) - 디자인 수정 반영 -->
+                    <!-- 대안 프레임 (아임웹) -->
                     <div class="p-6 border-2 border-green-100 rounded-xl bg-green-50">
                         <!-- 타이틀 중앙 정렬 적용: text-center 추가 -->
                         <h4 class="text-xl font-bold text-green-700 flex items-center justify-center mb-4 text-center">
@@ -537,8 +608,8 @@
                                 <p class="text-sm">개발 기간이 유사하더라도, <strong>템플릿 기반의 직관적인 빌더</strong>로 신속하게 구조를 완성하고 싶을 때.</p>
                             </div>
                             <div>
-                                <h5 class="text-lg font-extrabold text-green-600">4. 고정 비용 예측</h5>
-                                <p class="text-sm">월 16,000원 또는 상업 확장 시 월 24,000원 (Pro 요금제) 등 플랫폼 비용이 명확하게 고정되어 투명한 비용 예측을 선호할 때.</p>
+                                <h5 class="text-lg font-extrabold text-green-600">4. PG 가입비 면제 찬스</h5>
+                                <p class="text-sm">초기 개발 시 <strong>Pro 요금제</strong>를 선택하여 PG사 가입비(22만원)를 면제받고, 초기 비용을 절감하고자 할 때.</p>
                             </div>
                         </div>
                     </div>
